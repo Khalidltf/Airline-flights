@@ -1,4 +1,4 @@
-class AirlineSerializer
+class AirlinesSerializer
   include FastJsonapi::ObjectSerializer
   attributes :name, :image_url, :slug
 

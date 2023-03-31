@@ -2,6 +2,9 @@ module Api
   module V1
     class ReviewsController < ApplicationController
 
+      # ActionController::InvalidAuthenticityToken in Api::V1::AirlinesController#create
+      protect_from_forgery with: :null_session
+      
       def create
         review = Review.new(review_params)
         if review.save
